@@ -1,0 +1,31 @@
+{
+  "name": "express-prisma-business-cms-backend-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"nodemon index src/server.js\" \"npx prisma studio\"",
+    "dev": "nodemon index src/server.js",
+    "deploy": "npm run build && npm run start",
+    "build": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm rebuild bcrypt --build-from-source"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.10",
+    "nodemon": "^3.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prisma": "^5.11.0"
+  }
+}
